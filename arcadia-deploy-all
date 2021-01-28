@@ -11,7 +11,7 @@ metadata:
 spec:
   ports:
   - port: 80
-    nodePort: 31584
+    targetPort: 31584
     name: backend-80
   selector:
     app: backend
@@ -61,7 +61,7 @@ metadata:
 spec:
   ports:
   - name: main-80
-    nodePort: 30511
+    targetPort: 30511
     port: 80
     protocol: TCP
     targetPort: 80
@@ -164,7 +164,7 @@ spec:
   ports:
   - port: 80
     name: app3-80
-    nodePort: 31662
+    targetPort: 31662
   selector:
     app: app3
 ---
