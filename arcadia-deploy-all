@@ -62,7 +62,7 @@ spec:
   ports:
   - name: main-80
     targetPort: 80
-    port: port
+    port: 80
     protocol: TCP
   selector:
     app: main
