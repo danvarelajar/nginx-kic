@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: arcadia-ingress
-  namespace: my-nginx-ingress
 spec:
   ingressClassName: nginx
   rules:
@@ -13,3 +12,7 @@ spec:
         backend:
           serviceName: main
           servicePort: 30511
+      - path: /files
+        backend:
+          serviceName: backend
+          servicePort: 31584
