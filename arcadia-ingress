@@ -11,16 +11,16 @@ spec:
       - path: /
         backend:
           serviceName: main
-          servicePort: 30511
+          servicePort: 80
       - path: /files
         backend:
           serviceName: backend
-          servicePort: 31584
+          servicePort: 80
       - path: /api
         backend:
           serviceName: app2
-          servicePort: 30362
+          servicePort: 80
       - path: /app3
         backend:
           serviceName: app3
-          servicePort: 31662
+          servicePort: 80
