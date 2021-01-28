@@ -10,7 +10,7 @@ metadata:
     service: backend
 spec:
   ports:
-  - port: 31584
+  - port: 80
     targetPort: 80 
     name: backend-80
   selector:
@@ -62,7 +62,7 @@ spec:
   ports:
   - name: main-80
     targetPort: 80
-    port: 30511
+    port: port
     protocol: TCP
   selector:
     app: main
@@ -111,7 +111,7 @@ metadata:
     service: app2
 spec:
   ports:
-  - port: 30362
+  - port: 80
     name: app2-80
     targetPort: 80
   selector:
@@ -161,7 +161,7 @@ metadata:
     service: app3
 spec:
   ports:
-  - port: 31662
+  - port: 80
     name: app3-80
     targetPort: 80
   selector:
