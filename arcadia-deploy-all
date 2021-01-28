@@ -64,7 +64,6 @@ spec:
     targetPort: 30511
     port: 80
     protocol: TCP
-    targetPort: 80
   selector:
     app: main
 ---
