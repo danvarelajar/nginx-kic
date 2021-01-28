@@ -113,7 +113,7 @@ spec:
   ports:
   - port: 80
     name: app2-80
-    nodePort: 30362
+    targetPort: 30362
   selector:
     app: app2
 ---
