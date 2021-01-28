@@ -16,3 +16,11 @@ spec:
         backend:
           serviceName: backend
           servicePort: 31584
+      - path: /api
+        backend:
+          serviceName: app2
+          servicePort: 30362
+      - path: /app3
+        backend:
+          serviceName: app3
+          servicePort: 31662
