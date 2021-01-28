@@ -1,0 +1,32 @@
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServer
+metadata:
+  name: arcadia-virtualserver
+spec:
+  host: arcadia2.example.local
+  upstreams:
+  - name: main
+    service: main
+    port: 30511
+  - name: app2
+    service: app2
+    port: 30362
+  - name: app3
+    service: app3
+    port: 31362
+  - name: backend
+    service: backend
+    port: 31584
+  routes:
+  - path: /
+    action:
+      pass: main
+  - path: /files
+    action:
+      pass: backend
+  - path: /api
+    action:
+      pass: app2
+  - path: /app3
+    action:
+      pass: app3
