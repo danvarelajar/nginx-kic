@@ -13,7 +13,7 @@ spec:
     port: 30362
   - name: app3
     service: app3
-    port: 31362
+    port: 31662
   - name: backend
     service: backend
     port: 31584
