@@ -65,10 +65,9 @@ server {
 
 	
 	app_protect_enable on;
-	app_protect_policy_file ##;
-	app_protect_security_log_enable on;
-	app_protect_security_log ##
-	app_protect_security_log_destination: "syslog:server=10.0.60.33:514";
+        app_protect_policy_file /etc/nginx/waf/nac-policies/default_default-security;
+        app_protect_security_log_enable on;
+        app_protect_security_log /etc/nginx/waf/nac-logconfs/default_logconf syslog:server=10.0.60.33:514;
 	
 	
 	{{if not $server.GRPCOnly}}
