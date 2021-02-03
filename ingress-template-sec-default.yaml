@@ -63,14 +63,13 @@ server {
 	set $resource_name "{{$.Ingress.Name}}";
 	set $resource_namespace "{{$.Ingress.Namespace}}";
 
-	{{- if $server.AppProtectEnable}}
-	app_protect_enable {{$server.AppProtectEnable}};
-	{{if $server.AppProtectPolicy}}app_protect_policy_file {{$server.AppProtectPolicy}};{{end}}
-	{{- end}}
-	{{- if $server.AppProtectLogEnable}}
-	app_protect_security_log_enable {{$server.AppProtectLogEnable}};
-	{{if $server.AppProtectLogConf}}app_protect_security_log {{$server.AppProtectLogConf}};{{end}}
-	{{- end}}
+	
+	app_protect_enable on;
+	app_protect_policy_file ##;
+	app_protect_security_log_enable on;
+	app_protect_security_log ##
+	app_protect_security_log_destination: "syslog:server=10.0.60.33:514";
+	
 	
 	{{if not $server.GRPCOnly}}
 	{{range $proxyHideHeader := $server.ProxyHideHeaders}}
