@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: arcadia-ingress
 spec:
-  ingressClassName: nginx-nap
+  ingressClassName: nginxplus
   rules:
   - host: arcadia1.example.local
     http:
