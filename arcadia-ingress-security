@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: arcadia-ingress
+  name: arcadia-ingress-sec
   annotations:
     appprotect.f5.com/app-protect-policy: "default/default-security"
     appprotect.f5.com/app-protect-enable: "True"
@@ -11,7 +11,7 @@ metadata:
 spec:
   ingressClassName: nginxplus-nap
   rules:
-  - host: arcadia1.example.local
+  - host: arcadia2.example.local
     http:
       paths:
       - path: /
