@@ -9,7 +9,7 @@ metadata:
     appprotect.f5.com/app-protect-security-log: "default/logconf"
     appprotect.f5.com/app-protect-security-log-destination: "syslog:server=10.0.60.33:514"
 spec:
-  ingressClassName: nginx-nap
+  ingressClassName: nginxplus-nap
   rules:
   - host: arcadia1.example.local
     http:
