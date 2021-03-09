@@ -4,7 +4,6 @@ metadata:
   name: sec_bot_defense
 spec:
   policy:
-    name: bot_defense_policy
     template:
       name: POLICY_TEMPLATE_NGINX_BASE
     applicationLanguage: utf-8
